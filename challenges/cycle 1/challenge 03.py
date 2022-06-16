@@ -5,7 +5,7 @@ def consultaRegistro(ventas, idProducto):
     f = False
     for item in ventas.values():
         if item[0] == idProducto:
-            print(f"Producto consultado : {item[0]}  Descripción  {item[1]}  #Parte  {item[2]}  Cantidad vendida  {item[3]}  Stock  {item[4]}  Comprador  {item[5]}  Documento  {item[6]}  Fecha Venta  {item[7]}")
+            print(f"Producto consultado : {item[0]}  Descripción  {item[1]}  #Parte  {item[2]}  Cantidad vendida  {item[3]}  Stock  {item[4]}  Comprador {item[5]}  Documento  {item[6]}  Fecha Venta  {item[7]}")
             f = True
     if f is False:
         print("No hay registro de venta de ese producto")
@@ -35,4 +35,5 @@ t3 = ([
 
 print(consultaRegistro(AutoPartes(t1[0]), t1[1]))
 print(consultaRegistro(AutoPartes(t2[0]), t2[1]))
-print(consultaRegistro(AutoPartes(t3[0]), t3[1]))
+c3 = consultaRegistro(AutoPartes(t3[0]), t3[1])
+print(c3 == "Producto consultado : 9852  Descripción  Culata  #Parte  XC9875  Cantidad vendida  2  Stock  165  Comprador Luis Molero  Documento  3455846  Fecha Venta  14/06/2020\nProducto consultado : 9852  Descripción  Culata  #Parte  XC9875  Cantidad vendida  2  Stock  165  Comprador Jose Mejia  Documento  1355846  Fecha Venta  14/06/2020")
